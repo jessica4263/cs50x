@@ -1,0 +1,20 @@
+sort1 uses: bubble sort
+
+How do you know?: the sorting of the 50,000 random numbers took 5.5 seconds.
+the sorting of the 50,000 reversed numbers took 4.9 seconds.
+the sorting of the 50,000 sorted numbers took 0.080 seconds.
+bubble sort is good for sorting already sorted numbers; otherwise, it is slow.
+
+sort2 uses: merge sort
+
+How do you know?:the sorting of the 50,000 random numbers took 0.4 seconds.
+the sorting of the 50,000 reversed numbers took 0.6 seconds.
+the sorting of the 50,000 sorted numbers took 0.5 seconds.
+merge sort is fast regardless of the sorting type.
+
+sort3 uses: selection sort
+
+How do you know?: the sorting of the 50,000 random numbers took 2.3 seconds.
+the sorting of the 50,000 reversed numbers took 2.5 seconds.
+the sorting of the 50,000 sorted numbers took 2.4 seconds.
+selection sort is slow regardless of whether it's sorting already sorted numbers.

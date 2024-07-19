@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title>Task manager</title>
+
+    </head>
+    <body class="background">
+        <nav>
+            <div>
+                <div class="navdiv">
+                    {% if session["user_id"] %}
+                        <a href="/"><img class="logo" src="{{ url_for('static', filename='logo design.png') }}"></a>
+                        <ul>
+                            <li class="nav-bar"><a class="nav-text"href="/">My lists</a></li>
+                            <li class="nav-bar"><a class="nav-text"href="/logout">Log Out</a></li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+    </body>
+    <footer class="footer">
+        <div>
+            Copyright &#169; Duarte
+        </div>
+    </footer>
+
+</html>

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class= "centered">
+    <h2>Here is your portfolio {{ username }} :</h2>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">Value</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for stock in stocks %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.shares}}</td>
+            <td>${{ stock.price|usd }}</td>
+            <td>${{ stock.total|usd }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tbody class="table-group-divider right">
+        <tr>
+          <td><strong>Cash: {{ cash_balance|usd }}</strong></td>
+        </tr>
+        <tr>
+          <td><strong>TOTAL: {{ total_cash|usd }}</strong></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

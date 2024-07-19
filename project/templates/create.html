@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block main %}
+    <div class="whitewindow">
+        <form action="/create" method="post">
+            <div>
+                <a class="nav-text create-buttons" href="/">x</a>
+            </div>
+            <div>
+                <input id="title" class="input-title" name="title" placeholder="List title" type="text">
+            </div>
+            <h3 class="color-title">Pick a list color</h3>
+            <div>
+                <div class="colorswatch green" id="green"></div>
+                <div class="colorswatch purple" id="purple"></div>
+                <div class="colorswatch yellow" id="yellow"></div>
+                <div class="colorswatch blue" id="blue"></div>
+                <div class="colorswatch orange" id="orange"></div>
+                <div class="colorswatch pink" id="pink"></div>
+            </div>
+            <div>
+                <button class="nav-text create-buttons" type="submit">done</button>
+                <div style="clear: both;"></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let form = document.querySelector('form');
+            let colorSwatches = document.querySelectorAll('.colorswatch');
+            let color;
+
+            colorSwatches.forEach(swatch => {
+                swatch.addEventListener('click', function() {
+                    colorSwatches.forEach(swatch => {
+                        swatch.style.border = 'none';
+                    });
+
+                    this.style.border = 'solid 2px #bebebe';
+                    color = this.id;
+                });
+            });
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                let title = document.querySelector('#title').value;
+
+                fetch('/create', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({title: title, color: color})
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    console.log('Form submitted successfully. Redirecting to home page.');
+                    window.location.href = '/';
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+            });
+        });
+    </script>
+{% endblock %}

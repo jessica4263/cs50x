@@ -1,0 +1,22 @@
+HTLM tags:
+1. <p>
+2. <div>
+3. <img>
+4. <button>
+5. <h5>
+6. <h1>
+7. <a>
+8. <input>
+9. <b>
+10. <meta>
+
+CSS properties:
+1. text-align: center;
+2. width: 30px;
+3. padding: 10px 100px 10px;
+4. margin: 220px 10px 10px;
+5. max-width: 20%;
+
+Description: I used javascript to ask for an input
+of the person and then say hello with the input, and
+bootstrap i mainly used it as a guide and for the typography.

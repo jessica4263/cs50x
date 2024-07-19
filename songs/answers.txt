@@ -1,0 +1,7 @@
+After calculating the average from energy(0.65906), danceability(0.71646) and valence(0.048443)
+i can deduce that if the highest numer 1.0 is that the aura of this listener is pretty calm
+with some danceable songs but not that high energy songs for a party or something like that.
+
+A better way of calculating this value could be maybe integrating the genre of the artist that where
+most listened and maybe to categorize prior the songs to this kind of caracteristics to have a more
+representative aproach.

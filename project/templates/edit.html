@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    <div class="whitewindow-list">
+        <div>
+            <a class="nav-text create-buttons" href="/">x</a>
+        </div>
+        <div>
+            <p class="date">{{ date }}</p>
+            <h5 class="title list-title color-{{ color }}"> {{ title }}</h5>
+        </div>
+        <hr class="list-line {{ color }}">
+        <form class="list-form" action="/edit/{{ id }}" method="post">
+            <input type="text" id="newtask" name="newtask" class="input-newtask" placeholder="Add new task">
+            <button type="submit" id="new" class="plusnewtask {{ color }}">+</button>
+        </form>
+        {% if tasks_all %}
+            {% for task in tasks_all %}
+                <div class="divtask containertask">
+                    <form action="/update_task/{{ task.id }}" method="post">
+                        <input type="hidden" name="list_id" value="{{ id }}">
+                        <label>
+                            <input type="checkbox" name="completed" value="1" onchange="this.form.submit()" {% if task.checkbox %}checked{% endif %}>
+                            <span class="checkmark"></span>
+                            <span class="list-text" {% if task.checkbox %}style="text-decoration: line-through;"{% endif %}>{{ task.task }}</span>
+                        </label>
+                    </form>
+                    <form action="/delete_task/{{ task.id }}" method="post">
+                        <button class="close-btn" type="submit">x</button>
+                    </form>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <div>
+            <a type="submit" class="nav-text create-buttons" name="change" href="/change/{{ id }}">change color</a>
+        </div>
+    </div>
+{% endblock %}

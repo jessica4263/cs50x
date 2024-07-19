@@ -1,0 +1,6 @@
+cs50
+datetime
+flask
+flask_session
+functools
+werkzeug.security

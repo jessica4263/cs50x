@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class= "centered">
+    <h2>Transactions from {{ username }} :</h2>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Datetime</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">Value</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    {% for transaction in transactions %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ transaction.date_purchase}}</td>
+            <td>{{ transaction.symbol }}</td>
+            <td>
+                {% if transaction.transaction_type == "sell" %}
+                    -{{ transaction.shares|usd }}
+                {% else %}
+                    +{{ transaction.shares|usd }}
+                {% endif %}
+            </td>
+            <td>${{ transaction.price }}</td>
+            <td>
+                {% if transaction.transaction_type == "sell" %}
+                    -{{ transaction.value|usd }}
+                {% else %}
+                    +{{ transaction.value|usd }}
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tbody class="table-group-divider right">
+        <tr>
+          <td><strong>TOTAL: ${{ total|round(2, 'floor') }} </strong></td>
+        </tr>
+    </tbody>
+  </table>
+{% endblock %}

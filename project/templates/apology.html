@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <div class="whitewindowapology">
+        <form action="/apology" method="post">
+            <h1 class="oops">Oops!</h1>
+            <h3 class="apologytext">Looks like something went wrong:</h3>
+            <h5 class="messageapology">"{{ message }}"</h5>
+            <img class="apologyimage" src="{{ url_for('static', filename='apologyink.png') }}">
+            <div>
+                <a class="nav-text returnbutton" href="/">return to homepage</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

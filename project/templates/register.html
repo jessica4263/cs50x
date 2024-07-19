@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form class="center" action="/register" method="post">
+        <img class="main-logo" src="static/logo design.png" alt="logo task manager.">
+        <div>
+            <input class="input-login" autocomplete="off" name="username" placeholder="Username" type="text">
+        </div>
+        <div>
+            <input class="input-login" autocomplete="off" name="password" placeholder="Password" type="password">
+        </div>
+        <div>
+            <input class="input-login" autocomplete="off" name="confirm-password" placeholder="Confirm password" type="password">
+        </div>
+        <button class="input-submit" type="submit">Register</button>
+    </form>
+    <div class="center">
+        <a class="nav-text" href="/login">Log in</a>
+    </div>
+{% endblock %}

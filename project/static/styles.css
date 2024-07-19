@@ -1,0 +1,679 @@
+<style>
+
+font{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title{
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title-index{
+  font-size: 40px;
+  margin-left: 45px;
+  margin-bottom: 0;
+}
+
+.main-logo{
+  width: 40%;
+  padding-top: 20%;
+  padding-bottom: 8px;
+}
+
+.nav-text{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #dda9f9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-text:hover{
+  text-decoration: underline;
+  color: #e6b070;
+}
+
+.navdiv{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-right: 35px;
+  margin-bottom: 0px;
+}
+
+.nav-bar{
+  list-style: none;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.navdiv + .indexline {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.logo{
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.plusbutton{
+  text-decoration: none;
+  width: 40px;
+  background-color: #dda9f9;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+}
+
+.plusbutton:hover{
+  background-color: #e6b070;
+}
+
+.nolists{
+  color: #eaddd6;
+  font-size: 50px;
+  margin-top: 150px;
+}
+
+.indexline{
+    border: none;
+    height: 1.5px;
+    background-color: #e6b070;
+    margin: 0px 40px 0px;
+    padding: 0;
+}
+
+.center{
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.input-login{
+  color: #565555;
+  width: 36%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.input-login:focus{
+  border: none;
+  outline: none;
+}
+
+.input-login::placeholder{
+  color: #dda9f9;
+  opacity: 1;
+}
+
+.input-submit{
+  width: 12%;
+  background-color: #e6b070;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  margin: 8px 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.input-submit:hover{
+  background-color: #dda9f9;
+}
+
+.background{
+  background-color: #f6f1ee;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.footer{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #dda9f9;
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+}
+
+.whitewindow{
+  background-color: white;
+  width: 500px;
+  height: auto;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 120px auto;
+}
+
+.colorswatch{
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  margin-top: -12px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.colorswatch:hover{
+  opacity: 0.7;
+}
+
+.input-title{
+  color: #565555;
+  width: 500px;
+  padding: 12px 20px;
+  margin-top: 30px;
+  margin-bottom: 8px;
+  display: inline-block;
+  border: solid 1.2px #bebebe;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background: white;
+  font-size: 17px;
+}
+
+.input-title:focus{
+  border: solid 2px #e8cff5;
+  outline: none;
+}
+
+.input-title::placeholder{
+  color: #565555;
+  font-size: 15px;
+  opacity: 1;
+}
+
+.color-title{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #565555;
+  margin-bottom: 30px;
+}
+
+.green{
+  background-color: #a3ed8c;
+}
+
+.purple{
+  background-color: #e8cff5;
+}
+
+.yellow{
+  background-color: #f3e075;
+}
+
+.blue{
+  background-color: #aae5f2;
+}
+
+.orange{
+  background-color: #f2b66f;
+}
+
+.pink{
+  background-color: #f5bfda;
+}
+
+.color-green{
+  color: #a3ed8c;
+}
+
+.color-purple{
+  color: #e8cff5;
+}
+
+.color-yellow{
+  color: #f3e075;
+}
+
+.color-blue{
+  color: #aae5f2;
+}
+
+.color-orange{
+  color: #f2b66f;
+}
+
+.color-pink{
+  color: #f5bfda;
+}
+
+
+.create-buttons{
+  font-size: 17px !important;
+  float: right;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Indexcards */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+}
+
+.card {
+  padding: 30px;
+  width: 250px;
+  height: 250px;
+  margin: 30px;
+  text-align: left;
+  border-radius: 40px;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover{
+  opacity: 0.8;
+}
+
+.card-title {
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.cardline{
+  border: none;
+  height: 1.2px;
+  background-color: #565555;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.card-action{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.card-text{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #565555;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+  margin-top: -5px;
+  padding-top: 0;
+}
+
+.card-action:hover{
+  text-decoration: underline;
+  color: #565555;
+}
+
+.card-container{
+  align-self: flex-end;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* Lists */
+.whitewindow-list{
+  background-color: white;
+  width: 750px;
+  height: auto;
+  border-radius: 15px;
+  padding: 100px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.date{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  color: #bebebe;
+  padding: 0;
+  margin: 0;
+}
+
+.list-title{
+  font-size: 40px;
+  margin-top: 30px;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.list-line{
+  border: none;
+  height: 1.5px;
+  margin: 0;
+  padding: 0;
+}
+
+.list-form{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.input-newtask{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #565555;
+  width: auto;
+  padding: 12px 20px;
+  border: solid 1.2px #bebebe;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background: white;
+  font-size: 15px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+
+.input-newtask:focus{
+  border: solid 2px #bebebe;
+  outline: none;
+}
+
+.input-newtask::placeholder{
+  color: #565555;
+  font-size: 15px;
+  opacity: 1;
+}
+
+.plusnewtask{
+  text-decoration: none;
+  width: 50px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+}
+
+.plusnewtask:hover{
+  background-color: #565555;
+}
+
+.list-text{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #565555;
+  line-height: 1.5;
+  padding-top: 0;
+  word-wrap: break-word;
+}
+
+/* Checkbox list */
+.containertask {
+  position: relative;
+  padding: 0px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.containertask input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 40px;
+}
+
+.containertask input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.containertask .checkmark {
+  position: absolute;
+  left: 0px;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 50%; /* Adjusted border-radius for circular checkbox */
+}
+
+/* When the checkbox is checked, change background color */
+.containertask input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containertask input:checked ~ .checkmark:after {
+  display: flex;
+}
+
+/* Style the checkmark/indicator */
+.containertask .checkmark:after {
+  left: 7px;
+  top: -6px;
+  width: 7px;
+  height: 15px;
+  border: solid gray;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.containertask .list-text {
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+/* Change the text color to gray and add a strikethrough when checked */
+.containertask input:checked ~ .list-text {
+  color: gray;
+  text-decoration: line-through;
+}
+
+/* Style for the close button */
+.close-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 18px;
+  right: 0;
+  flex-shrink: 0;
+}
+.close-btn:hover{
+	background-color: #bebebe;
+  color: white;
+}
+
+.divtask{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 3px;
+}
+
+.divtask:hover{
+  background-color: #ebe7e7;
+  border-radius: 10px;
+}
+
+/* Delete window */
+.delete-question{
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #565555;
+  font-size: 35px;
+  text-align: center;
+  color: #565555;
+  margin-bottom: 30px;
+  padding-top: 50px;
+}
+
+.yesnocontainter{
+ text-align: center;
+ padding-bottom: 60px;
+ padding-top: 10px;
+}
+
+.justify{
+  text-align: justify;
+}
+
+.yesnobutton{
+  text-decoration: none;
+  width: 60px;
+  background-color: #dda9f9;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 20px;
+  line-height: 20px;
+}
+
+.nobutton{
+  text-decoration: none;
+  color: white;
+}
+
+.yesnobutton:hover{
+  background-color: #e6b070;
+}
+
+/* Apology */
+
+.whitewindowapology{
+  background-color: white;
+  width: 550px;
+  height: auto;
+  border-radius: 15px;
+  padding: 70px;
+  margin: 70px auto;
+  text-align: center;
+}
+
+.oops{
+  font-family: "Rozha One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #565555;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.apologytext{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #565555;
+  margin-bottom: 30px;
+  padding-top: 0px;
+}
+
+.messageapology{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  color: #dda9f9;
+  margin-bottom: 50px;
+  margin-top: 0;
+  padding-top: 0px;
+}
+
+.apologyimage{
+  width: 500px;
+  margin-bottom: 40px;
+}
+
+</style>

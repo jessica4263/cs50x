@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete list
+{% endblock %}
+
+{% block main %}
+    <div class="whitewindow">
+        <form action="/delete/{{ id }}" method="post">
+            <div>
+                <a class="nav-text create-buttons" href="/">x</a>
+            </div>
+            <h3 class="delete-question">Are you sure?</h3>
+            <h5 class="color-title justify">Once the list is deleted, both the list and its tasks will be permanently removed, and you will no longer be able to access this information.</h5>
+            <div class="yesnocontainter">
+                <button class="yesnobutton" type="submit">yes</button>
+                <button class="yesnobutton"><a class="nobutton" href="/">no</a></button>
+                <div style="clear: both;"></div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

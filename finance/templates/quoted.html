@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if stock %}
+<div class= "centered">
+    <p>Stock Price: {{ "{:.2f}".format(stock.price) }}</p>
+    <p>Stock Symbol: {{ stock.symbol }}</p>
+</div>
+{% endif %}
+{% endblock %}
+

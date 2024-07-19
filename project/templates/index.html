@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="navdiv">
+        <h5 class= "title title-index">My tasks</h5>
+        <ul>
+            <li class="nav-bar nav-text"> Create a new list</li>
+            <li class="nav-bar"><a href="/create" class="plusbutton">+</a></li>
+        </ul>
+    </div>
+    <hr class="indexline">
+    {% if tasks_all %}
+        <div class="container">
+            {% for list_dict in tasks_all %}
+                <div class="card {{ list_dict.color }}">
+                    <div>
+                        <h3 class="card-title">{{ list_dict.title }}</h3>
+                        <hr class="cardline">
+                    </div>
+                    {% for i in range(4) %}
+                        {% if list_dict.get('task' ~ i) %}
+                            <p class="card-text">{{ list_dict['task' ~ i] }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <p class="card-text">...</p>
+                    <div class="card-container">
+                        <a class="card-action" href="/edit/{{ list_dict.id }}">edit</a>
+                        <a class="card-action" href="/delete/{{ list_dict.id }}">delete</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="center">
+            <p class="title nolists">You don't have any lists.</p>
+        </div>
+    {% endif %}
+{% endblock %}
